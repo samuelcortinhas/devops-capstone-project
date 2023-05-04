@@ -212,7 +212,7 @@ class TestAccountService(TestCase):
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
 
         list_response = self.client.get(
-            BASE_URL, content_type="application/json"
+            BASE_URL, content_type = "application/json"
         )
         accounts = list_response.get_json()
         self.assertEqual(len(accounts), 1)
